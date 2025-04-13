@@ -1,7 +1,7 @@
 resource "fastly_service_vcl" "service" {
   default_ttl        = 3600
   http3              = false
-  name               = "eving-hanon (Deliver)"
+  name               = "hanon"
   stale_if_error     = false
   stale_if_error_ttl = 43200
 
@@ -61,10 +61,7 @@ resource "fastly_service_vcl" "service" {
   }
 
   domain {
-    name = "eving-hanon.global.ssl.fastly.net"
-  }
-  domain {
-    name = "www.hkakehas.site"
+    name = "hanon.global.ssl.fastly.net"
   }
 
   vcl {

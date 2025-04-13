@@ -46,7 +46,6 @@ sub vcl_miss {
     return (fetch);
   }
 
-  # set bereq.http.X-Fastly-Origin = "https://eving-hanon.s3.us-west-1.amazonaws.com";
   set bereq.http.X-Fastly-Origin = "https://us-west.object.fastlystorage.app";
   set bereq.http.X-Fastly-Whitelist = "Origin Origin-Credentials Demuxed Extension Hls-No-Captions";
   # set bereq.http.X-Fastly-Origin-Credentials = table.lookup(otfp, "credentials");
